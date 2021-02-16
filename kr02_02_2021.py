@@ -1,11 +1,12 @@
 def task_1(two_dim_words):
-    """
-        Здесь должен быть ваш код.
-        Переменная two_dim_words - ваш двумерный список.
-        Заполнять список значениями не нужно.
-        Финальное значение должно быть помещено в переменную sorted_words.
-        """
-
+    two_dim_words = [['яблоко', 'груша', 'апельсин'],
+     ['морковь', 'огурец', 'картошка'],
+     ['арбуз', 'ежевика', 'малина',]]
+    new=[]
+    for i in two_dim_words:
+        new.extend(i)
+        new.sort()
+        new.sort(key = len)
     return sorted_words
 
 
@@ -20,21 +21,24 @@ def task_3(numbers):
 
 
 def task_4_1(words):
-    """
-        Здесь должен быть ваш код.
-        Переменная words - ваш кортеж слов из задания.
-        Финальное значение должно быть помещено в переменную res.
-        """
+    words = ('Alaska', 'auto', 'arc', 'agenda', 'arugula', 'caveman')
+    res = []
+    for i in words:
+        if i.count('a') >= 2:
+            kv= str(i.count('a') ** 2)
+            res += kv
+res = tuple(words_1)
 
     return res
 
 
 def task_4_2(words):  # можно сделать тесты
-    """
-        Здесь должен быть ваш код.
-        Переменная words - ваш кортеж слов из задания.
-        Финальное значение должно быть помещено в переменную res.
-        """
+    words = ('Alaska', 'auto', 'arc', 'agenda', 'arugula', 'caveman')
+    res = []
+    for i in words:
+        if len(i) > 3:
+            res += str(len(i))
+    res = set(res)
 
     return res
 
@@ -50,21 +54,18 @@ def task_4_3(words):
 
 
 def task_5(lst1, lst2):
-    """
-        Здесь должен быть ваш код.
-        Переменные lst1 и lst2 - два данных списка.
-        Финальное значение должно быть помещено в переменную diff.
-        """
+    lst1= set([1,2,3,55,76,23,43,4])
+    lst2= set([65,464,21,1,4,76,23])
+    s3 = list(lst1 - lst2)
+    diff = sorted(s3)
 
     return diff
 
 
 def task_6(lst):
-    """
-        Здесь должен быть ваш код.
-        Переменная lst - ваш список.
-        Финальное значение должно быть помещено в переменную res.
-        """
-
+    lst = input().split()
+    new_set = set(new_list)
+    new_list2 = list(new_set)
+    res = tuple(reversed(new_list2))
     return res
 
